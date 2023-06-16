@@ -1,9 +1,7 @@
-"use client"
 
+"use client"
 import Herosection from '@/components/Herosection'
 import React from 'react'
-
-
 
 function Home() {
   return (

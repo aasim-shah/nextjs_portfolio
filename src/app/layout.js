@@ -1,3 +1,4 @@
+"use client"
 import Header from '@/components/Header'
 import './globals.css'
 import { Quicksand} from 'next/font/google'
