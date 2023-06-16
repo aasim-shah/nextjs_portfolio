@@ -1,4 +1,3 @@
-'use client'
 import Header from '@/components/Header'
 import './globals.css'
 import { Quicksand} from 'next/font/google'
@@ -8,6 +7,7 @@ const inter = Quicksand({ subsets: ['latin'] , weight : "400"})
 export const metadata = {
   title: 'Aasimshah'
 }
+
 
 export default function RootLayout({ children }) {
   return (
