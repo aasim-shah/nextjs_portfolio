@@ -1,0 +1,27 @@
+import React, { useState } from 'react'
+import Image from 'next/image'
+import { useTheme } from 'next-themes'
+
+function Herosection() {
+    const { theme, setTheme } = useTheme()
+
+  return (
+    <div className='flex flex-col sm:flex-row w-10/12 mx-auto py-16 items-center'>
+        
+        <div className="w-6/12  h-44">
+            <p className="text-3xl font-black">
+                Hey, I'm Aasim shah
+            </p>
+            <p className="text-lg font-semibold mt-4">Welcome to my Portfolio 😍</p>
+            <p className=" font-semibold  mt-4">I'm a software developer from Pakistan,I make open-source projects webpages and native apps  and write about code, design, and life.</p>
+        </div>
+        {theme && theme==="light" ?
+        <Image  src={'/assets/1.jpg'} className='ml-32' width={350} height={350}/>
+        :
+        <Image  src={'/assets/dark_hero.png'} className='ml-32' width={300} height={300}/>
+  }
+    </div>
+  )
+}
+
+export default Herosection
