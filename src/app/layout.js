@@ -3,7 +3,7 @@ import Header from '@/components/Header'
 import './globals.css'
 import { Quicksand} from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
-const inter = Quicksand({ subsets: ['latin'] , weight : ["300" , "400" , "500" ,"600" , "700"]})
+const inter = Quicksand({ subsets: ['latin'] , weight : "400"})
 
 export const metadata = {
   title: 'Aasimshah',
