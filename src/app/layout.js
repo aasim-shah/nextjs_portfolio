@@ -5,7 +5,7 @@ import { Quicksand} from 'next/font/google'
 import { ThemeProvider } from 'next-themes'
 const inter = Quicksand({ subsets: ['latin'] , weight : "400"})
 
-export const metadata = {
+ const metadata = {
   title: 'Aasimshah'
 }
 
