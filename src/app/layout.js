@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <ThemeProvider attribute='class'>
       <Header/>
-        <main className='dark:bg-cyan-900 h-[100vh]'>
+        <main className='dark:bg-cyan-900 '>
         {children}
         </main>
       </ThemeProvider>
