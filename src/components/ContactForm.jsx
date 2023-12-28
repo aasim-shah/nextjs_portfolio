@@ -13,23 +13,54 @@ import { useTheme } from "next-themes";
 function ContactForm() {
     const [name, setname] = useState("");
     const [email, setemail] = useState("");
-    const { theme, setTheme } = useTheme()
     const [message, setmessage] = useState("");
     const [phone, setphone] = useState("");
+    const { theme }  = useTheme()
+
+
     const notify = () => toast.success(`✌🔥 Email Sent Successfully !`, {
         position: "top-right",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: true,
-        theme,
+        theme : "colored",
+            style:{backgroundColor :  theme == "light" ?  "#145a70" : "#fff" , color : theme == "dark" ? "#145a70" : "#fff"},
         pauseOnHover: true,
+        progressStyle : {backgroundColor : "orange"},
         draggable: true,
         progress: undefined,
     });
     const form = useRef();
     const sendEmail = (e) => {
-        toast.warn("Please wait email is sending !")
         e.preventDefault();
+
+        console.log({email})
+        if(!email  || email == "" ||  !name || "" || !message == ""){
+         return   toast.warn("Fill All Fields Correctly 😔" ,  {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                theme : "colored",
+                style:{backgroundColor :  theme == "light" ?  "#145a70" : "#fff" , color : theme == "dark" ? "#145a70" : "#fff"},
+                progressStyle : {backgroundColor : "orange"},
+                draggable: true,
+            })
+        }
+
+
+        toast.warn("Please wait email is sending 🚀" ,  {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            theme : "colored",
+            style:{backgroundColor :  theme == "light" ?  "#145a70" : "#fff" , color : theme == "dark" ? "#145a70" : "#fff"},
+            progressStyle : {backgroundColor : "orange"},
+            draggable: true,
+        })
         emailjs.sendForm('service_435tgv9', 'template_z4brbe8', form.current, 'ZEGda7uZo2tK6cPbU')
             .then((result) => {
                 console.log(result.text);
@@ -48,11 +79,11 @@ function ContactForm() {
             <div id="contact" className="heading mb-12  pt-12  ">
             </div>
             <ToastContainer />
-            <div className="grid mb-[8rem] grid-flow-row grid-cols-1 md:grid-cols-2  my-4">
+            <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2  my-4">
                 <div className="contact_details flex flex-col items-center mt-2 md:mt-9">
                     <div className="card dark:bg-cyan-900 shadow bg-gray-100 w-10/12 md:w-5/12 my-3 text-center  rounded-md py-4 px-4">
                         <p className="text-xl font-bold">ADDRESS</p>
-                        <p className="text-ss">Mardan KP Paksitan</p>
+                        <p className="text-ss">Mardan-KP, Pakisitan</p>
                     </div>
 
                     <div className="card dark:bg-cyan-900 shadow bg-gray-100 w-10/12 md:w-5/12 my-3 text-center  rounded-md py-4 px-4">
@@ -65,7 +96,7 @@ function ContactForm() {
                     </div>
                 </div>
 
-                <div className="form dark:bg-cyan-900 shadow bg-gray-100 mx-auto pb-4 my-3 rounded-md w-10/12 flex flex-col items-center ">
+                <div className="form dark:bg-cyan-900 shadow bg-gray-100 mx-auto pb-4 mb-[2rem] my-3 rounded-md w-10/12 flex flex-col items-center ">
                     <form method="post" ref={form} onSubmit={sendEmail} className="sm:w-8/12 mt-3 mx-auto ">
                         <p className="text-center text-sm font-bold  my-5">
                             CONTACT NOW

@@ -1,10 +1,11 @@
+"use client"
 import Image from 'next/image'
 import { useTheme } from 'next-themes'
 
 import { motion, transform, useScroll } from "framer-motion"
 
 function Herosection() {
-  const { theme, setTheme } = useTheme()
+  const { theme } = useTheme()
 
   return (
     <div className='flex flex-col sm:flex-row w-10/12 mx-auto py-16 sm:items-center'>
