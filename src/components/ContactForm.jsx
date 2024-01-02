@@ -82,18 +82,10 @@ function ContactForm() {
             <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2  my-4">
                 <div className="contact_details flex flex-col items-center mt-2 md:mt-9">
                     <div className="card dark:bg-cyan-900 shadow bg-gray-100 w-10/12 md:w-5/12 my-3 text-center  rounded-md py-4 px-4">
-                        <p className="text-xl font-bold">ADDRESS</p>
-                        <p className="text-ss">Mardan-KP, Pakisitan</p>
-                    </div>
-
-                    <div className="card dark:bg-cyan-900 shadow bg-gray-100 w-10/12 md:w-5/12 my-3 text-center  rounded-md py-4 px-4">
                         <p className="text-xl font-bold">EMAIL</p>
                         <p className="text-ss">contact@aasimshah.com</p>
                     </div>
-                    <div className="card dark:bg-cyan-900 shadow bg-gray-100 w-10/12 md:w-5/12 my-3 text-center  rounded-md py-4 px-4">
-                        <p className="text-xl font-bold">WHATSAPP</p>
-                        <p className="text-ss">+923179936736</p>
-                    </div>
+                  
                 </div>
 
                 <div className="form dark:bg-cyan-900 shadow bg-gray-100 mx-auto pb-4 mb-[2rem] my-3 rounded-md w-10/12 flex flex-col items-center ">
@@ -124,17 +116,17 @@ function ContactForm() {
                         </button>
                     </form>
                     <div className="icons  flex flex-row mt-5">
-                        <a href="https://www.instagram.com/aasim__shah_/" className="text-[#C13584] mx-2">
+                        <a href="" className="text-[#C13584] mx-2">
                             <AiFillInstagram size={30} />
                         </a>
-                        <a href="https://www.facebook.com/asimshah0/" className="text-blue-600 mx-2">
+                        <a href="" className="text-blue-600 mx-2">
                             <AiFillFacebook size={30} />
                         </a>
 
-                        <a href="whatsapp://send?text=Hello%20World!&phone=+923179936736" className="text-[#25d366] mx-2">
+                        <a href="" className="text-[#25d366] mx-2">
                             <IoLogoWhatsapp size={30} />
                         </a>
-                        <a href="https://www.github.com/aasim-shah/" className=" mx-2">
+                        <a href="" className=" mx-2">
                             <AiFillGithub size={30} />
                         </a>
                     </div>

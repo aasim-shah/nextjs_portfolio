@@ -33,7 +33,7 @@ function Header() {
                 </Link>
                 <Link href={"/contact"}>Blog</Link>
                 <Link href={"/contact"}>Projects</Link>
-                <Link className='flex flex-row gap-2 items-center' href={"https://github.com/aasim-shah"}>Github <RiExternalLinkLine size={18}/></Link>
+                <Link href={"#"} className='flex flex-row gap-2 items-center'>Github <RiExternalLinkLine size={18}/></Link>
                 
             </div>
         </div>
